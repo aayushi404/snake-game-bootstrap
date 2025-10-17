@@ -2,6 +2,10 @@ const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 const scoreDisplay = document.getElementById('score');
 const gameOverMessage = document.getElementById('gameOverMessage');
+const upButton = document.getElementById('upButton');
+const downButton = document.getElementById('downButton');
+const leftButton = document.getElementById('leftButton');
+const rightButton = document.getElementById('rightButton');
 
 const gridSize = 20;
 let snake;
@@ -132,6 +136,30 @@ document.addEventListener('keydown', e => {
     } else if (keyPressed === 'ArrowLeft' && !goingRight) {
         direction = 'left';
     } else if (keyPressed === 'ArrowRight' && !goingLeft) {
+        direction = 'right';
+    }
+});
+
+upButton.addEventListener('click', () => {
+    if (direction !== 'down') {
+        direction = 'up';
+    }
+});
+
+downButton.addEventListener('click', () => {
+    if (direction !== 'up') {
+        direction = 'down';
+    }
+});
+
+leftButton.addEventListener('click', () => {
+    if (direction !== 'right') {
+        direction = 'left';
+    }
+});
+
+rightButton.addEventListener('click', () => {
+    if (direction !== 'left') {
         direction = 'right';
     }
 });
