@@ -1,0 +1,25 @@
+body {
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+canvas {
+    background-color: #e9ecef;
+    display: block;
+}
+
+.score-display {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
